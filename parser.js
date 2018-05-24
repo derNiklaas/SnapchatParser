@@ -1,4 +1,4 @@
-const input = require('./testdata.json');
+const input = require('./snap_history.json');
 const fs = require('fs');
 
 const received = input["Received Snap History"];
@@ -55,16 +55,13 @@ let output_received_raw = output_received.hour.zero + "\n" + output_received.hou
 + output_received.hour.fourteen + "\n" + output_received.hour.fifteen + "\n" + output_received.hour.sixteen + "\n" + output_received.hour.seventeen + "\n" + output_received.hour.eighteen + "\n"
 + output_received.hour.nineteen + "\n" + output_received.hour.twenty + "\n" + output_received.hour.twentyone + "\n" + output_received.hour.twentytwo + "\n" + output_received.hour.twentythree;
 
-//for(i = 0; i < output_received.hour.length)
-//output_received = output_received + created + "\n";
-
-
 console.log(output_received_raw);
 
 let file = fs.createWriteStream('received.txt');
 file.on('error', function(err) {});
 file.write(output_received_raw);
 file.end();
+
 function putHourInJSON(hour) {
     switch (hour){
         case "00": output_received.hour.zero = output_received.hour.zero+1; break;
