@@ -1,0 +1,25 @@
+{
+  "name": "snapchatparser",
+  "version": "1.0.0",
+  "description": "Parser to convert snap_history.json to a txt file",
+  "main": "parser.js",
+  "scripts": {
+    "test": "node parser.js",
+    "start": "node parser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derNiklaas/SnapchatParser.git"
+  },
+  "keywords": [
+    "SnapChat",
+    "Parser",
+    "snap_history.json"
+  ],
+  "author": "derNiklaas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derNiklaas/SnapchatParser/issues"
+  },
+  "homepage": "https://github.com/derNiklaas/SnapchatParser#readme"
+}

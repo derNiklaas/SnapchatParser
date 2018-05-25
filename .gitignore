@@ -151,5 +151,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# IMPORTANT - To prevent developers from uploading their SnapChat Data, we exclude the default snap_history.json
+snap_history.json
 
 # End of https://www.gitignore.io/api/node,windows,jetbrains
