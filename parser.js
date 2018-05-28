@@ -1,8 +1,33 @@
-const input = require('./snap_history.json');
+// Module imports
 const fs = require('fs');
+
+// Parse our console arguments
+const consoleArguments = [];
+process.argv.forEach(function (element) {
+    var argSeperationCharacter = new RegExp("=*");
+    if (argSeperationCharacter.test(element)) {
+        let keyValueOfargument = element.split("=");
+        consoleArguments[keyValueOfargument[0]] = keyValueOfargument[1];
+    } else {
+        consoleArgs[element] = undefined;
+    }
+});
+
+// Check if we have to adjust the path to the snap_history.json
+let inputPath = './snap_history.json';
+if (consoleArguments['file'] !== undefined) {
+    inputPath = consoleArguments['file'];
+    if (!inputPath.startsWith("./") && !inputPath.startsWith("/")) {
+        inputPath = "./" + inputPath;
+    }
+}
+
+console.log("Using '" + inputPath + "' as path to the file to parse!");
+const input = require(inputPath);
 
 const received = input["Received Snap History"];
 const send = input["Sent Snap History"];
+
 console.log("Length of received: " + received.length);
 
 let output_received = {
