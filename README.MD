@@ -5,7 +5,7 @@ A small tool to parse a snap_history.json and convert it to a simple txt file.
 ## Usage
 
 To use SnapchatParser you have to have a working NodeJS installation (including NPM).
-You can download your snap_history.json directly from Snapchat: https://support.snapchat.com/de-DE/a/download-my-data
+You can download your snap_history.json directly from Snapchat: https://support.snapchat.com/en-US/a/download-my-data
 
 Just parsing a file named snap_hsitory.json in the same folder as SnapchatParser:
 
